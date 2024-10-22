@@ -1,0 +1,239 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url(../fonts/Montserrat.ttf);
+}
+.products {
+  margin: 50px 0;
+}
+.products__wrap {
+  display: flex;
+  min-height: 30vh;
+  gap: 30px;
+}
+@media (max-width: 1000px) {
+  .products__wrap {
+    gap: 10px;
+    flex-direction: column;
+  }
+}
+.products__menu {
+  display: flex;
+  justify-content: space-between;
+  font-family: "Montserrat";
+  position: fixed;
+  z-index: 4;
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  transition: all 1s;
+  transform: translateY(100%);
+}
+.products__menu.hidden {
+  display: none;
+}
+.products__menu.inactive {
+  animation: jump_out 0.7s ease-in-out forwards;
+}
+.products__menu.active {
+  animation: jump_in 0.7s ease-in-out forwards;
+}
+.products__pages {
+  margin: 0 auto;
+}
+.products__button {
+  align-self: flex-end;
+  padding: 10px;
+  margin: 0 7vw;
+  display: none;
+  font-family: "Montserrat";
+  background: 0;
+  border: 1px solid black;
+  font-size: 25px;
+  border-radius: 100px;
+}
+@media (max-width: 1000px) {
+  .products__button {
+    display: block;
+  }
+}
+.products__filter {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Montserrat";
+  transform: translateY(-100px);
+  opacity: 0;
+}
+@media (max-width: 1300px) {
+  .products__filter {
+    margin: 0 20px;
+  }
+}
+@media (max-width: 1300px) {
+  .products__filter {
+    width: 300px;
+  }
+}
+@media (max-width: 1100px) {
+  .products__filter {
+    width: 30vw;
+  }
+}
+@media (max-width: 1000px) {
+  .products__filter {
+    display: none;
+  }
+}
+.products__filter_mob {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-family: "Montserrat";
+  padding: 30px;
+}
+.products__filter-button {
+  padding: 15px;
+  background: black;
+  color: white;
+  font-family: "Montserrat";
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 30px;
+  border: 0;
+}
+.products__filter.active {
+  animation: jump_down 0.7s ease-in-out forwards;
+}
+.products__filter-title {
+  font-size: 30px;
+}
+.products__filter-input {
+  padding: 20px 30px;
+  border: 2px solid black;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+}
+.products__filter-input::-moz-placeholder {
+  font-size: 18px;
+  color: black;
+}
+.products__filter-input::placeholder {
+  font-size: 18px;
+  color: black;
+}
+.products__categories {
+  margin-top: 15px;
+}
+.products__categories-title {
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.products__categories-item {
+  display: flex;
+  gap: 15px;
+}
+.products__categories-item input {
+  transform: scale(2);
+}
+.products__categories-item label {
+  font-size: 25px;
+}
+@media (max-width: 1300px) {
+  .products__categories-item label {
+    font-size: 23px;
+  }
+}
+@media (max-width: 1100px) {
+  .products__categories-item label {
+    font-size: 20px;
+    margin-bottom: 5px;
+  }
+}
+.products__cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  transform: translateX(100px);
+  opacity: 0;
+}
+.products__cards.active {
+  animation: jump_left 0.7s ease-in-out forwards;
+}
+.products__card {
+  width: 400px;
+  height: 500px;
+  border-radius: 16px;
+  position: relative;
+  margin: 0 auto;
+}
+@media (max-width: 1300px) {
+  .products__card {
+    width: 350px;
+  }
+}
+@media (max-width: 1100px) {
+  .products__card {
+    width: 30vw;
+  }
+}
+@media (max-width: 1000px) {
+  .products__card {
+    width: 45vw;
+    height: 500px;
+  }
+}
+@media (max-width: 1000px) {
+  .products__card {
+    width: 90vw;
+    height: 300px;
+  }
+}
+.products__card_ms {
+  background: url(../../img/places/cards/city.png) no-repeat center/cover;
+}
+.products__card_rs {
+  background: url(../../img/places/cards/red_square.png) no-repeat center/cover;
+}
+.products__card_hyatt {
+  background: url(../../img/places/cards/hyatt.png) no-repeat center/cover;
+}
+.products__card_marriot {
+  background: url(../../img/places/cards/marriot.png) no-repeat center/cover;
+}
+.products__card-category {
+  opacity: 0;
+}
+.products__card-block {
+  margin: 30px;
+  position: absolute;
+  bottom: 0;
+  color: white;
+  font-family: "Montserrat";
+}
+.products__card-title {
+  font-size: 30px;
+  font-weight: 600;
+}
+@media (max-width: 1000px) {
+  .products__card-title {
+    font-size: 25px;
+    width: 90%;
+  }
+}
+.products__card-text {
+  font-size: 20px;
+  font-weight: 200;
+}
+@media (max-width: 900px) {
+  .products__card-text {
+    width: 80%;
+  }
+}
+.products__card-address {
+  margin-top: 25px;
+  font-size: 20px;
+  font-weight: 300;
+}

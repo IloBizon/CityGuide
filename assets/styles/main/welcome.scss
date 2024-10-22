@@ -1,0 +1,256 @@
+@import "../vars";
+
+.welcome {
+    
+    &__wrap {
+        width: 100%;
+        padding: 50px 0;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        font-family: $main_font;
+    }
+    &__block-title {
+        &.active {
+            animation: jump_down 0.7s ease-in-out forwards;
+        }
+        opacity: 0;
+        margin: 0 auto;
+        font-size: 50px;
+        font-weight: 400;
+        margin-bottom: 90px;
+
+        @media (max-width: 768px) {
+            font-size: 40px;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 35px;
+        }
+
+        @media (max-width: 400px) {
+            font-size: 30px;
+        }
+    }
+
+}
+
+.places {
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+        margin-bottom: 50px;
+    }
+
+    &__title {
+        font-size: 35px;
+        font-weight: 600;
+    }
+
+    &__row {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 30px;        
+    }
+
+    &__card {
+        &_city {
+            
+            background: url(../../img/main/places/city.png) no-repeat center / cover;
+            opacity: 0;
+            &.active {
+                animation: jump_left 0.7s ease-in-out forwards;
+            }
+        }
+        &_rs {
+            background: url(../../img/main/places/redsquare.png) no-repeat center / cover;
+            opacity: 0;
+            &.active {
+                animation: jump_right 0.7s ease-in-out forwards;
+            }
+        }
+        &_church {
+            background: url(../../img/main/places/church.png) no-repeat center / cover;
+            opacity: 0;
+            &.active {
+                animation: jump_left 0.7s ease-in-out forwards;
+            }
+        }
+        &_more {
+            background: url(../../img/main/places/more.png) no-repeat center / cover;
+            opacity: 0;
+            &.active {
+                animation: jump_right 0.7s ease-in-out forwards;
+            }
+        }
+
+        &-title {
+            font-size: 52px;
+
+            @media (max-width:768px) {
+                font-size: 40px;
+            }
+
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        &-text {
+            font-weight: 300;
+            font-size: 30px;
+            @media (max-width:768px) {
+                font-size: 25px;
+            }
+        }
+        &-button {
+            align-self: start;
+            margin-top: auto;
+            color: black;
+            background-color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+        }
+
+        transition: all 0.3s ease-in-out;
+        color: white;
+        padding: 5% 3%;
+        height: 25vh;
+        display: flex;
+        flex-direction: column;
+        @media (max-width: 768px) {
+            height: 40vh;
+        }
+        
+
+    }
+    @media (max-width: 1220px) {
+        margin: 0 50px;
+    }
+    @media (max-width: 500px) {
+        margin: 0 15px;
+    }
+    
+}
+
+.hotels {
+    font-family: $main_font;
+
+    &__wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    &__title {
+        opacity: 0;
+        &.active {
+            animation: jump_down 0.7s ease-in-out forwards;
+        }
+        font-size: 35px;
+        font-weight: 600;
+        margin-bottom: 50px;
+    }
+
+    
+    &__slider-wrap {
+        display: flex;
+        padding: 0 10px;
+        gap: 20px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__carousel {
+        display: grid;
+        height: 500px;
+        grid-gap: 0 15px; 
+        grid-auto-flow: column; 
+        grid-auto-columns: 33%; 
+        overflow: hidden;
+        gap: 30px;
+        width: 100%;
+        @media (max-width:1000px) {
+            grid-auto-columns: 50%; 
+            gap: 0 10px;
+        }
+
+        @media (max-width:768px) {
+            grid-auto-columns: 100%; 
+        }
+
+        &-button {
+            &_left {
+                background: url("../../img/icons/left_arrow.svg") no-repeat center / cover;
+            }
+            &_right {
+                background: url("../../img/icons/right_arrow.svg") no-repeat center / cover;
+            }
+            border: 0;
+            width: 50px;
+            height: 50px;
+            &:hover {
+                cursor: pointer;
+            }
+
+        }
+    }
+    &__card {
+        &_marriot {
+            background: url(../../img/main/hotels/marriot.png) no-repeat center / cover;
+        }
+        &_national {
+            background: url(../../img/main/hotels/national.png) no-repeat center / cover;
+        }
+        &_hyatt {
+            background: url(../../img/main/hotels/hyatt.png) no-repeat center / cover;
+        }
+        &_seasons {
+            background: url(../../img/main/hotels/seasons.png) no-repeat center / cover;
+        }
+        &_radisson {
+            background: url(../../img/main/hotels/radisson.png) no-repeat center / cover;
+        }
+        display: flex;
+        padding: 20px;
+        background-color: $main_color;
+        color: white;
+        &-block {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-top: auto
+        }
+        &-title {
+            font-weight: 600;
+            font-size: 40px;
+            @media (max-width: 1220px) {
+                font-size: 30px;
+            }
+        }
+        &-button {
+            align-self: start;
+            margin-top: auto;
+            color: black;
+            background-color: white;
+            padding: 15px 30px;
+            border-radius: 10px;
+
+            @media (max-width: 1220px) {
+                font-size: 15px;
+            }
+            @media (max-width: 710px) {
+                font-size: 12px;
+            }
+        }
+       
+    }
+    @media (max-width: 1220px) {
+        margin: 0 50px;
+    }
+    @media (max-width: 500px) {
+        margin: 0 15px;
+    }
+}
+
+

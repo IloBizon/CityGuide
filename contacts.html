@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/header.css">
+    <link rel="stylesheet" href="assets/styles/products/banner.css">
+    <link rel="stylesheet" href="assets/styles/footer.css">
+    <link rel="stylesheet" href="assets/styles/anims.css">
+
+    <title>Contacts</title>
+</head>
+<body>
+    <nav class="menu hidden" id="menu">
+        <ul class="menu__list">
+            <li><a class="menu__button" href="./index.html">Главная</a></li>
+            <li><a class="menu__button" href="./places.html">Места</a></li>
+            <li><a class="menu__button" href="./contacts.html">Карта</a></li>
+        </ul>
+        <button class="menu__close-button" onclick="toggleMobMenu()"><img src="assets/img/icons/cross.svg" alt="close"></button>
+    </nav>
+
+
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__wrap">
+                <p class="header__logo"><a href="/">MSC</a></p>
+                <div class="header__block">
+                    <button class="header__burger-button" onclick="toggleMobMenu()">
+                        <img src="assets/img/icons/burger_light.svg" alt="burger_menu" class="header__burger">
+                    </button>
+                    <nav class="header__nav">
+                        <ul class="header__buttons">
+                            <li class="header__button"><a href="./index.html">Главная</a></li>
+                            <li class="header__button"><a href="./places.html">Места</a></li>
+                            <li class="header__button"><a href="./contacts.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header class="header header_fixed hidden" id="header_fixed">
+        <div class="container">
+            <div class="header__wrap">
+                <p class="header__logo header__logo_fixed"><a href="/">MSC</a></p>
+                <div class="header__block">
+                    <button class="header__burger-button" onclick="toggleMobMenu()">
+                        <img src="assets/img/icons/burger_dark.svg" alt="burger_menu" class="header__burger">
+                    </button>
+                    <nav class="header__nav">
+                        <ul class="header__buttons">
+                            <li class="header__button header__button_fixed"><a href="./index.html">Главная</a></li>
+                            <li class="header__button header__button_fixed"><a href="./places.html">Места</a></li>
+                            <li class="header__button header__button_fixed"><a href="./contacts.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="prod-banner">
+        <div class="prod-banner__wrap">
+            <h1 class="prod-banner__title scroll-reveal">Контакты</h1>
+        </div>
+    </section>
+
+
+
+    <script src="assets/js/animantionsOnScroll.js"></script>
+    <script src="assets/js/header.js"></script>
+</body>
+</html>

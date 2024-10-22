@@ -1,0 +1,29 @@
+@import "../vars";
+.pagination {
+    text-align: center;
+    display: block;
+    font-family: $main_font;
+    margin: 0 auto;
+    margin-top: 2rem;
+    a {
+        color: black;
+        padding: 8px 16px;
+        text-decoration: none;
+        border: 1px solid black;
+        margin: 0 5px;
+        border-radius: 4px;
+
+        &:hover {
+            background-color: black;
+            color: white;
+        }
+        &.active {
+            background-color: black;
+            color: white;
+        }
+
+    }
+
+
+    
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/header.css">
+    <link rel="stylesheet" href="assets/styles/main/banner.css">
+    <link rel="stylesheet" href="assets/styles/main/about.css">
+    <link rel="stylesheet" href="assets/styles/main/welcome.css">
+    <link rel="stylesheet" href="assets/styles/vars.css">
+    <link rel="stylesheet" href="assets/styles/main/map.css">
+    <link rel="stylesheet" href="assets/styles/footer.css">
+        <link rel="stylesheet" href="assets/styles/anims.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+    <nav class="menu hidden" id="menu">
+        <ul class="menu__list">
+            <li><a class="menu__button" href="./index.html">Главная</a></li>
+            <li><a class="menu__button" href="./places.html">Места</a></li>
+            <li><a class="menu__button" href="./contacts.html">Карта</a></li>
+        </ul>
+        <button class="menu__close-button" onclick="toggleMobMenu()"><img src="assets/img/icons/cross.svg" alt="close"></button>
+    </nav>
+
+
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__wrap">
+                <p class="header__logo"><a href="/">MSC</a></p>
+                <div class="header__block">
+                    <button class="header__burger-button" onclick="toggleMobMenu()">
+                        <img src="assets/img/icons/burger_light.svg" alt="burger_menu" class="header__burger">
+                    </button>
+                    <nav class="header__nav">
+                        <ul class="header__buttons">
+                            <li class="header__button"><a href="./index.html">Главная</a></li>
+                            <li class="header__button"><a href="./places.html">Места</a></li>
+                            <li class="header__button"><a href="./contacts.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header class="header header_fixed hidden" id="header_fixed">
+        <div class="container">
+            <div class="header__wrap">
+                <p class="header__logo header__logo_fixed"><a href="/">MSC</a></p>
+                <div class="header__block">
+                    <button class="header__burger-button" onclick="toggleMobMenu()">
+                        <img src="assets/img/icons/burger_dark.svg" alt="burger_menu" class="header__burger">
+                    </button>
+                    <nav class="header__nav">
+                        <ul class="header__buttons">
+                            <li class="header__button header__button_fixed"><a href="./index.html">Главная</a></li>
+                            <li class="header__button header__button_fixed"><a href="./places.html">Места</a></li>
+                            <li class="header__button header__button_fixed"><a href="./contacts.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <section class="banner">
+        <div class="banner__wrap">
+            <div class="banner__block">
+                <h2 class="banner__title scroll-reveal" id="typing_text">MOSCOW</h1>
+                <p class="banner__text scroll-reveal" id="typing_text">the city of dreams</p>
+            </div>
+        </div>
+    </section>
+    <section class="about">
+        <div class="container">
+            <div class="about__wrap">
+                <div class="about__block scroll-reveal">
+                    <h2 class="about__title">Москва - город мечты</h2>
+                    <p class="about__text">Место невероятной динамики и размеров, который невозможно объять за одну поездку. Это финансовый, транспортный, логистический, деловой, культурный и туристический центр страны.</p>
+                </div>
+                <img src="assets/img/main/moscow.png" alt="moscow" class="about__image scroll-reveal">
+            </div>
+        </div>
+    </section>
+    <section class="welcome">
+        <div class="container">
+            <div class="welcome__wrap">
+                <h2 class="welcome__block-title scroll-reveal">Добро пожаловать!</h2>
+
+                <div class="places" id="places">
+                    <div class="places__wrap">
+                        <h4 class="places__title">Что посетить?</h4>
+                        <div class="places__row">
+                            <div class="places__card places__card_city scroll-reveal">
+                                <h5 class="places__card-title">Moscow City</h5>
+                                <p class="places__card-text">самые высокие постройки в России</p>
+                                <a href="./places.html?place=Moscow City" class="places__card-button">Подробнее →</a>
+                            </div>
+                            
+                            <div class="places__card places__card_rs scroll-reveal">
+                                <h5 class="places__card-title">Красная Площадь</h5>
+                                <p class="places__card-text">Центр города</p>
+                                <a href="./places.html?place=Красная Площадь" class="places__card-button">Подробнее →</a>
+                            </div>
+                            <div class="places__card places__card_church scroll-reveal">
+                                <h5 class="places__card-title">Храм Василия Блаженного</h5>
+                                <p class="places__card-text">самые высокие постройки в России</p>
+                                <a href="./places.html?place=Храм Василия Блаженного" class="places__card-button">Подробнее →</a>
+                            </div>
+                            <div class="places__card places__card_more scroll-reveal">
+                                <h5 class="places__card-title">Больше мест</h5>
+                                <p class="places__card-text">Найдите остальные достопримечательности на нашем сайте</p>
+                                <a href="./places.html" class="places__card-button">Найти →</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="hotels">
+        <div class="container">
+            <div class="hotels__wrap">
+                <div class="hotels__title scroll-reveal">Где остановиться?</div>
+                <div class="hotels__slider-wrap">
+                    <button class="hotels__carousel-button hotels__carousel-button_left" onclick="slideCards(-1)"></button>
+                    <ul class="hotels__carousel" id="hotels_scroller">
+                        <li class="hotels__card hotels__card_marriot">
+                            <div class="hotels__card-block">
+                                <h5 class="hotels__card-title">Marriot</h5>
+                                <a href="#" class="hotels__card-button">Забронировать →</a>
+                            </div>
+                        </li>
+                        <li class="hotels__card hotels__card_national">
+                            <div class="hotels__card-block">
+                                <h5 class="hotels__card-title">Националь</h5>
+                                <a href="#" class="hotels__card-button">Забронировать →</a>
+                            </div>
+                        </li>
+                        <li class="hotels__card hotels__card_hyatt">
+                            <div class="hotels__card-block">
+                                <h5 class="hotels__card-title">Hyatt</h5>
+                                <a href="#" class="hotels__card-button">Забронировать →</a>
+                            </div>
+                        </li>
+                        <li class="hotels__card hotels__card_seasons">
+                            <div class="hotels__card-block">
+                                <h5 class="hotels__card-title">Seasons</h5>
+                                <a href="#" class="hotels__card-button">Забронировать →</a>
+                            </div>
+                        </li>
+                        
+                        <li class="hotels__card hotels__card_radisson">
+                            <div class="hotels__card-block">
+                                <h5 class="hotels__card-title">Radisson</h5>
+                                <a href="#" class="hotels__card-button">Забронировать →</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="hotels__carousel-button hotels__carousel-button_right" onclick="slideCards(1)"></button>
+    
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="map" id="map">
+        <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3A51f5e97d8b6e355a88c4e4a240b32aa48ce1121d339969d25a8ab92d88110832&amp;source=constructor" width="100%" height="400" frameborder="0"></iframe>
+    </section>
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <p class="footer__logo">MSС</p>
+
+                <nav class="footer__block">
+                    <ul class="footer__buttons">
+                        <li class="footer__button"><a href="./index.html">Главная</a></li>
+                        <li class="footer__button"><a href="./index.html#places">Места</a></li>
+                        <li class="footer__button"><a href="#">Отели</a></li>
+                        <li class="footer__button"><a href="./index.html#map">Карта</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer__rights">©Gukasov.T inc Все права защищены</p>
+        </div>
+    </footer>
+</body>
+<script src="assets/js/scroller.js"></script>
+<script src="assets/js/animantionsOnScroll.js"></script>
+<script src="assets/js/header.js"></script>
+</html>
