@@ -29,7 +29,6 @@ displayPage(1)
 
 function initFilters() {
 
-
     let params = new URLSearchParams(document.location.search);
 
     if (params.has("place")){
