@@ -17,6 +17,8 @@
     }
     &__pages {
         margin: 0 auto;
+        justify-content: center;
+
         &.active {
             animation: jump_down 0.7s ease-in-out forwards;
         }
@@ -101,6 +103,7 @@
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
+
     }
     &__card {
         width: 400px;

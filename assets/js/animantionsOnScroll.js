@@ -14,10 +14,17 @@ let observer = new IntersectionObserver((entries,observer)=>{
 
 function scrollTrigger(selector) {
     let elems = document.querySelectorAll(selector)
-
+    console.log(123)
     elems = Array.from(elems)
     elems.forEach(el => {
-        addObserver(el)
+
+        if(window.outerWidth > 500) {
+            addObserver(el)
+        }
+        else {
+
+            el.classList.add("active")
+        }
 
     })
 

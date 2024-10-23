@@ -50,7 +50,7 @@ export function updatePagination() {
         pagination.style.display = "none"
     }
     else {
-        pagination.style.display = "block"
+        pagination.style.display = "flex"
     }
 } 
 
