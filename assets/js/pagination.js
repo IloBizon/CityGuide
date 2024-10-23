@@ -10,7 +10,8 @@ let currentPage = 1;
 
 
 export function displayPage(page) {
-    updatePagination() 
+    currentPage = page 
+    updatePagination()
     const startIndex = (page - 1) * maxCards; 
     const endIndex = startIndex + maxCards;
     
