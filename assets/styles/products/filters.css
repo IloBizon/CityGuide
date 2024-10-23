@@ -22,12 +22,22 @@
 }
 .products__pages {
   margin: 0 auto;
+  transform: translateY(100px);
+  opacity: 0;
+}
+.products__pages.active {
+  animation: jump_down 0.7s ease-in-out forwards;
 }
 .products__filter {
   display: flex;
   flex-direction: column;
   gap: 10px;
   font-family: "Montserrat";
+  transform: translateX(-100px);
+  opacity: 0;
+}
+.products__filter.active {
+  animation: jump_right 0.7s ease-in-out forwards;
 }
 @media (max-width: 1300px) {
   .products__filter {

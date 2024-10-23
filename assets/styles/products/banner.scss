@@ -12,6 +12,12 @@
     &__title {
         font-size: 150px;
         font-family: "Montserrat";
+        &.active {
+            animation: jump_down 0.7s ease-in-out forwards;
+        }
+        transform: translateY(-100px);
+        opacity: 0;
+        font-size: 150px;
         @media (max-width: 1300px) {
             font-size: 130px;;
         }

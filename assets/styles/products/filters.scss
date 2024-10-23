@@ -17,6 +17,11 @@
     }
     &__pages {
         margin: 0 auto;
+        &.active {
+            animation: jump_down 0.7s ease-in-out forwards;
+        }
+        transform: translateY(100px);
+        opacity: 0;
     }
 
 
@@ -25,6 +30,13 @@
         flex-direction: column;
         gap: 10px;
         font-family: $main_font;
+
+        &.active {
+            animation: jump_right 0.7s ease-in-out forwards;
+        }
+        transform: translateX(-100px);
+        opacity: 0;
+
         @media (max-width: 1300px) {
             margin: 0 20px;
         }

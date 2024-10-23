@@ -7,6 +7,11 @@
   flex-direction: column;
   gap: 20px;
   margin: 50px 25px;
+  transform: translateX(-100px);
+  opacity: 0;
+}
+.contacts.active {
+  animation: jump_right 0.7s ease-in-out forwards;
 }
 .contacts__title {
   margin-bottom: 20px;
