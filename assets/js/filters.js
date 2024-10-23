@@ -28,6 +28,8 @@ displayPage(1)
 
 
 function initFilters() {
+
+
     let params = new URLSearchParams(document.location.search);
 
     if (params.has("place")){
@@ -38,7 +40,13 @@ function initFilters() {
         searchInput.value = place
         return
     }
-
+    if (!localStorage.hasOwnProperty("search_query")) {
+        localStorage.setItem("search_query", "")
+       }
+    if (!localStorage.hasOwnProperty("filter_query")) {
+        localStorage.setItem("filter_query", "all")
+       }
+    
 
     searchInput.value = localStorage.getItem("search_query")
     activatedRadioValue = localStorage.getItem("filter_query")

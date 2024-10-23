@@ -13,11 +13,6 @@
 .prod-banner__title {
   font-size: 150px;
   font-family: "Montserrat";
-  transform: translateY(-100px);
-  opacity: 0;
-}
-.prod-banner__title.active {
-  animation: jump_down 0.7s ease-in-out forwards;
 }
 @media (max-width: 1300px) {
   .prod-banner__title {
@@ -29,13 +24,18 @@
     font-size: 100px;
   }
 }
+@media (max-width: 500px) {
+  .prod-banner__title {
+    font-size: 70px;
+  }
+}
 @media (max-width: 425px) {
   .prod-banner__title {
-    font-size: 80px;
+    font-size: 60px;
   }
 }
 @media (max-width: 320px) {
   .prod-banner__title {
-    font-size: 60px;
+    font-size: 40px;
   }
 }

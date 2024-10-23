@@ -17,7 +17,7 @@
         <ul class="menu__list">
             <li><a class="menu__button" href="./index.html">Главная</a></li>
             <li><a class="menu__button" href="./places.html">Места</a></li>
-            <li><a class="menu__button" href="./contacts.html">Карта</a></li>
+            <li><a class="menu__button" href="./contacts.html">Контакты</a></li>
         </ul>
         <button class="menu__close-button" onclick="toggleMobMenu()"><img src="assets/img/icons/cross.svg" alt="close"></button>
     </nav>
@@ -65,46 +65,37 @@
 
     <section class="prod-banner">
         <div class="prod-banner__wrap">
-            <h1 class="prod-banner__title scroll-reveal">МЕСТА</h1>
+            <h1 class="prod-banner__title">МЕСТА</h1>
         </div>
     </section>
-
-    <section class="products">
-        <!-- MENU -->
-        <div class="container">
-        
-            
-
-            <div class="products__wrap">
-                <div class="" id="filter_menu">
-                    <div class="products__filter scroll-reveal">
-                        <p class="products__filter-title">Фильтры</p>
-                        <input type="text" placeholder="Поиск" class="products__filter-input" id="search-input">
-                        <div class="products__categories">
-                            <p class="products__categories-title">Категории</p>
     
-                            <ul class="products__categories-list">
-                                <li class="products__categories-item">
-                                    <input type="radio" name="category" value="all" id="all" checked>
-                                    <label for="all">Всё</label>
-                                </li>
-                                <li class="products__categories-item">
-                                    <input type="radio" name="category" value="Отели" id="hotels">
-                                    <label for="hotels">Отели</label>
-                                </li>
-                                <li class="products__categories-item">
-                                    <input type="radio" name="category" value="Достопримечательности" id="sights">
-                                    <label for="sights">Достопримечательности</label>
-                                </li>
-                            </ul>
-                        </div>
+    <section class="products">
+        <div class="container">
+            <div class="products__wrap">
+                <div class="products__filter">
+                    <p class="products__filter-title">Фильтры</p>
+                    <input type="text" placeholder="Поиск" class="products__filter-input" id="search-input">
+                    <div class="products__categories">
+                        <p class="products__categories-title">Категории</p>
 
+                        <ul class="products__categories-list">
+                            <li class="products__categories-item">
+                                <input type="radio" name="category" value="all" id="all" checked>
+                                <label for="all">Всё</label>
+                            </li>
+                            <li class="products__categories-item">
+                                <input type="radio" name="category" value="Отели" id="hotels">
+                                <label for="hotels">Отели</label>
+                            </li>
+                            <li class="products__categories-item">
+                                <input type="radio" name="category" value="Достопримечательности" id="sights">
+                                <label for="sights">Достопримечательности</label>
+                            </li>
+                        </ul>
                     </div>
                 </div>
-
-                <button class="products__button" onclick="toggleMenu()">Фильтры</button>
                 <div class="products__pages">
-                    <ul class="products__cards scroll-reveal">
+                    <ul class="products__cards">
                         <li class="products__card products__card_ms">
                             <div class="products__card-block">
                                 <h3 class="products__card-category">Достопримечательности</h3>
@@ -119,6 +110,14 @@
                                 <h3 class="products__card-category">Достопримечательности</h3>
                                 <h2 class="products__card-title">Красная площадь</h2>
                                 <p class="products__card-text">центр города</p>
+                                <p class="products__card-address">ул Красная 5</p>
+                            </div>
+                        </li>
+                        <li class="products__card products__card_vb">
+                            <div class="products__card-block">
+                                <h3 class="products__card-category">Достопримечательности</h3>
+                                <h2 class="products__card-title">Храм Василия Блаженного</h2>
+                                <p class="products__card-text">Древний храм на Красной площади</p>
                                 <p class="products__card-address">ул Красная 5</p>
                             </div>
                         </li>
@@ -141,11 +140,34 @@
                                 <p class="products__card-address">ул Набережная 1</p>
                             </div>
                         </li>
+                        <li class="products__card products__card_radison">
+                            <div class="products__card-block">
+                                <h3 class="products__card-category">Отели</h3>
+                                <h2 class="products__card-title">Radisson</h2>
+                                <p class="products__card-address">ул Набережная 1</p>
+                            </div>
+                        </li>
+                        <li class="products__card products__card_seasons">
+                            <div class="products__card-block">
+                                <h3 class="products__card-category">Отели</h3>
+                                <h2 class="products__card-title">Seasons</h2>
+                                <p class="products__card-address">ул Набережная 1</p>
+                            </div>
+                        </li>
+                        <li class="products__card products__card_national">
+                            <div class="products__card-block">
+                                <h3 class="products__card-category">Отели</h3>
+                                <h2 class="products__card-title">National</h2>
+                                <p class="products__card-address">ул Набережная 1</p>
+                            </div>
+                        </li>
                     </ul>
                     <div class="pagination" id="pagination"> 
                         <a href="#" id="pagination_prev">Previous</a> 
                         <a href="#" class="pagination__page" data-page="1">1</a> 
                         <a href="#" class="pagination__page" data-page="2">2</a> 
+                        <a href="#" class="pagination__page" data-page="3">3</a> 
+                        <a href="#" class="pagination__page" data-page="4">4</a> 
                         <a href="#" id="pagination_next">Next</a> 
                         <p id="pagination__nums"> </p> 
                     </div>
@@ -164,7 +186,7 @@
                 <nav class="footer__block">
                     <ul class="footer__buttons">
                         <li class="footer__button"><a href="./index.html">Главная</a></li>
-                        <li class="footer__button"><a href="./index.html#places">Места</a></li>
+                        <li class="footer__button"><a href="./places.html">Места</a></li>
                         <li class="footer__button"><a href="#">Отели</a></li>
                         <li class="footer__button"><a href="./index.html#map">Карта</a></li>
                     </ul>
@@ -173,10 +195,10 @@
             <p class="footer__rights">©Gukasov.T inc Все права защищены</p>
         </div>
     </footer>
+
     <script src="assets/js/animantionsOnScroll.js"></script>
     <script src="assets/js/header.js"></script>
     <script src="assets/js/filters.js" type="module"></script>
     <script src="assets/js/pagination.js" type="module"></script>
-    <script src="assets/js/filterMenu.js"></script>
 </body>
 </html>

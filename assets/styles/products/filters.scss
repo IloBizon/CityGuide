@@ -5,54 +5,18 @@
         display: flex;
         min-height: 30vh;
         gap: 30px;
-        @media (max-width: 1000px) {
+        @media (max-width: 100px) {
             gap: 10px;
+        }
+        
+        @media (max-width: 1000px) {
             flex-direction: column;
         }
-    }
 
-    &__menu {
-        display: flex;
-        justify-content: space-between;
-        font-family: $main_font;
-        position: fixed;
-        z-index: 4;
-        background-color: white;
-        width: 100%;
-        height: 100vh;
-        top: 0;
-        transition: all 1s;
-        transform: translateY(100%);
-        &.hidden {
-            display: none;
-        }
-        &.inactive {
-            animation: jump_out 0.7s ease-in-out forwards;
-        }
-        &.active {
-            animation: jump_in 0.7s ease-in-out forwards;
-        }
+        
     }
-
     &__pages {
         margin: 0 auto;
-    }
-    &__button {
-        align-self: flex-end;
-        padding: 10px;
-        margin: 0 7vw;
-        display: none;
-
-        font-family: $main_font;
-        background: 0;
-        border: 1px solid black;
-        font-size: 25px;
-        border-radius: 100px;
-
-
-        @media (max-width: 1000px) {
-            display: block;
-        }
     }
 
 
@@ -71,38 +35,10 @@
         @media (max-width: 1100px) {
             width: 30vw;
         }
-
-
         @media (max-width: 1000px) {
-            display: none;
-        }
-        &_mob {
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
-            font-family: $main_font;
-            padding: 30px;
-            
-        }
-        &-button {
-            padding: 15px;
-            background: black;
-            color: white;
-            font-family: $main_font;
-            font-weight: 600;
-            font-size: 20px;
-            border-radius: 30px;
-            border: 0;
+            width: 90vw;
         }
 
-
-
-
-        &.active {
-            animation: jump_down 0.7s ease-in-out forwards;
-        }
-        transform: translateY(-100px);
-        opacity: 0;
 
 
         &-title {
@@ -153,11 +89,6 @@
         display: flex;
         flex-wrap: wrap;
         gap: 30px;
-        &.active {
-            animation: jump_left 0.7s ease-in-out forwards;
-        }
-        transform: translateX(100px);
-        opacity: 0;
     }
     &__card {
         width: 400px;
@@ -192,12 +123,26 @@
         &_rs {
             background: url(../../img/places/cards/red_square.png) no-repeat center / cover;
         }
+        &_vb {
+            background: url(../../img/main/places/church.png) no-repeat center / cover;
+        }
+
         &_hyatt {
             background: url(../../img/places/cards/hyatt.png) no-repeat center / cover;
         }
         &_marriot {
             background: url(../../img/places/cards/marriot.png) no-repeat center / cover;
         }
+        &_national {
+            background: url(../../img/main/hotels/national.png) no-repeat center / cover;
+        }
+        &_seasons {
+            background: url(../../img/main/hotels/seasons.png) no-repeat center / cover;
+        }
+        &_radison {
+            background: url(../../img/main/hotels/radisson.png) no-repeat center / cover;
+        }
+
         &-category {
             opacity: 0;
         }
