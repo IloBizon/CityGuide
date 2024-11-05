@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacts</title>
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/header.css">
+    <link rel="stylesheet" href="assets/styles/anims.css">
+    <link rel="stylesheet" href="assets/styles/products/banner.css">
+    <link rel="stylesheet" href="assets/styles/footer.css">
+    <link rel="stylesheet" href="assets/styles/products/banner.css">
+    <link rel="stylesheet" href="assets/styles/modal.css">
+    <link rel="stylesheet" href="assets/styles/contacts/contacts.css">
+</head>
+<body>
+    <nav class="menu hidden" id="menu">
+        <ul class="menu__list">
+            <li><a class="menu__button" href="./">Главная</a></li>
+            <li><a class="menu__button" href="./places.html">Места</a></li>
+            <li><a class="menu__button" href="./contacts.html">Контакты</a></li>
+        </ul>
+        <button class="menu__close-button" onclick="toggleMobMenu()"><img src="assets/img/icons/cross.svg" alt="close"></button>
+    </nav>
+
+
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__wrap">
+                <p class="header__logo"><a href="./">MSC</a></p>
+                <div class="header__block">
+                    <button class="header__burger-button" onclick="toggleMobMenu()">
+                        <img src="assets/img/icons/burger_light.svg" alt="burger_menu" class="header__burger">
+                    </button>
+                    <nav class="header__nav">
+                        <ul class="header__buttons">
+                            <li class="header__button"><a href="./">Главная</a></li>
+                            <li class="header__button"><a href="./places.html">Места</a></li>
+                            <li class="header__button"><a href="./contacts.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header class="header header_fixed hidden" id="header_fixed">
+        <div class="container">
+            <div class="header__wrap">
+                <p class="header__logo header__logo_fixed"><a href="./">MSC</a></p>
+                <div class="header__block">
+                    <button class="header__burger-button" onclick="toggleMobMenu()">
+                        <img src="assets/img/icons/burger_dark.svg" alt="burger_menu" class="header__burger">
+                    </button>
+                    <nav class="header__nav">
+                        <ul class="header__buttons">
+                            <li class="header__button header__button_fixed"><a href="./">Главная</a></li>
+                            <li class="header__button header__button_fixed"><a href="./places.html">Места</a></li>
+                            <li class="header__button header__button_fixed"><a href="./contacts.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="prod-banner">
+        <div class="prod-banner__wrap">
+            <h1 class="prod-banner__title scroll-reveal">Контакты</h1>
+         </div>
+    </section>
+    <div class="modal inactive hidden">
+        <div class="modal__wrap">
+            <form class="modal__form" action="">
+                <p class="modal__title">Оставьте заявку</p>
+
+
+                <label for="name" class="modal__label">Ваше имя</label>
+                <input type="text" name="name" id="name" class="modal__input" placeholder="Иван">
+    
+                <label for="phone" class="modal__label">Ваш телефон</label>
+                <input type="text" name="phone" id="phone" class="modal__input" placeholder="+7(123)456-78-91">
+                <button class="modal__button" type="submit">Отправить</button>
+            </form>
+        </div>
+    </div>
+    <section class="contacts  scroll-reveal">
+        <div class="container">
+            <h2 class="contacts__title">Связь с нами</h2>
+
+            <p class="contacts__contact">Наш адрес: г Москва, ул Красная 4</p>
+            <p class="contacts__contact"><a href="tel:+71231231212">Телефон: +71231231212</a></p>
+            <p class="contacts__contact"><a href="mailto:support@dreamcity.ru">Email: support@dreamcity.ru</a></p>
+            <button class="contacts__button" onclick="toggleModal()">Оставить заявку</button>
+        </div>
+    </section>
+
+
+
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__wrap">
+                <p class="footer__logo">MSС</p>
+
+                <nav class="footer__block">
+                    <ul class="footer__buttons">
+                        <li class="footer__button"><a href="./">Главная</a></li>
+                        <li class="footer__button"><a href="./places.html">Места</a></li>
+                        <li class="footer__button"><a href="./index.html#hotels">Отели</a></li>
+                        <li class="footer__button"><a href="./index.html#map">Карта</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer__rights">©Gukasov.T inc Все права защищены</p>
+        </div>
+    </footer>
+
+
+    <script src="assets/js/animantionsOnScroll.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/modal.js"></script>
+</body>
+</html>

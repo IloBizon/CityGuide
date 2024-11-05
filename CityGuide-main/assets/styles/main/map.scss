@@ -1,0 +1,7 @@
+.map {
+    margin: 50px 0;
+    &__frame {
+        height: 50vh;
+        filter: grayscale(100%);
+    }
+}
