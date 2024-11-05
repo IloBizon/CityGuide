@@ -14,7 +14,6 @@ let observer = new IntersectionObserver((entries,observer)=>{
 
 function scrollTrigger(selector) {
     let elems = document.querySelectorAll(selector)
-    console.log(123)
     elems = Array.from(elems)
     elems.forEach(el => {
 

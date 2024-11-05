@@ -102,6 +102,8 @@
     &__cards {
         display: flex;
         flex-wrap: wrap;
+        align-items: center;
+        height: max-content;
         gap: 30px;
 
     }
@@ -146,7 +148,7 @@
             background: url(../../img/places/cards/hyatt.png) no-repeat center / cover;
         }
         &_marriot {
-            background: url(../../img/places/cards/marriot.png) no-repeat center / cover;
+            background: url(../../implaces/cards/marriot.pngg/) no-repeat center / cover;
         }
         &_national {
             background: url(../../img/main/hotels/national.png) no-repeat center / cover;

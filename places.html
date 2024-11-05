@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="assets/styles/products/filters.css">
     <link rel="stylesheet" href="assets/styles/products/pagination.css">
     <link rel="stylesheet" href="assets/styles/footer.css">
+    <link rel="stylesheet" href="assets/styles/loader.css">
     <title>Places</title>
 </head>
 <body>
@@ -62,7 +63,11 @@
         </div>
     </header>
 
+    <span class="loader" id="loader">
 
+        <p>Загрузка...</p>
+
+    </span>
     <section class="prod-banner">
         <div class="prod-banner__wrap">
             <h1 class="prod-banner__title  scroll-reveal">МЕСТА</h1>
@@ -95,80 +100,16 @@
                     </div>
                 </div>
                 <div class="products__pages scroll-reveal">
-                    <ul class="products__cards">
-                        <li class="products__card products__card_ms">
-                            <div class="products__card-block">
-                                <h3 class="products__card-category">Достопримечательности</h3>
-                                <h2 class="products__card-title">Moscow City</h2>
-                                <p class="products__card-text">самые высокие постройки в России</p>
-                                <p class="products__card-address">ул Красная 1</p>
-                            </div>
-                        </li>
-                        
-                        <li class="products__card products__card_rs">
-                            <div class="products__card-block">
-                                <h3 class="products__card-category">Достопримечательности</h3>
-                                <h2 class="products__card-title">Красная площадь</h2>
-                                <p class="products__card-text">центр города</p>
-                                <p class="products__card-address">ул Красная 5</p>
-                            </div>
-                        </li>
-                        <li class="products__card products__card_vb">
-                            <div class="products__card-block">
-                                <h3 class="products__card-category">Достопримечательности</h3>
-                                <h2 class="products__card-title">Храм Василия Блаженного</h2>
-                                <p class="products__card-text">Древний храм на Красной площади</p>
-                                <p class="products__card-address">ул Красная 5</p>
-                            </div>
-                        </li>
-                        
-                        <li class="products__card products__card_hyatt">
-                            <div class="products__card-block">
-                                <h3 class="products__card-category">Отели</h3>
-                                <h2 class="products__card-title">Hyatt</p>
-                                <p class="products__card-text">5  звёздочный отель в центре</h2>
-                                <p class="products__card-address">ул Красная 1234</p>
-                            </div>
-                        </li>
+                    <ul class="products__cards" id="cards">
 
-                        
-                        <li class="products__card products__card_marriot">
-                            <div class="products__card-block">
-                                <h3 class="products__card-category">Отели</h3>
-                                <h2 class="products__card-title">Marriott</h2>
-                                <p class="products__card-text">отель на Москве реке</p>
-                                <p class="products__card-address">ул Набережная 1</p>
-                            </div>
-                        </li>
-                        <li class="products__card products__card_radison">
-                            <div class="products__card-block">
-                                <h3 class="products__card-category">Отели</h3>
-                                <h2 class="products__card-title">Radisson</h2>
-                                <p class="products__card-address">ул Набережная 1</p>
-                            </div>
-                        </li>
-                        <li class="products__card products__card_seasons">
-                            <div class="products__card-block">
-                                <h3 class="products__card-category">Отели</h3>
-                                <h2 class="products__card-title">Seasons</h2>
-                                <p class="products__card-address">ул Набережная 1</p>
-                            </div>
-                        </li>
-                        <li class="products__card products__card_national">
-                            <div class="products__card-block">
-                                <h3 class="products__card-category">Отели</h3>
-                                <h2 class="products__card-title">National</h2>
-                                <p class="products__card-address">ул Набережная 1</p>
-                            </div>
-                        </li>
                     </ul>
                     <div class="pagination" id="pagination"> 
-                        <a href="#" id="pagination_prev">Previous</a> 
+                        <a href="#" id="pagination_prev">Назад</a> 
                         <a href="#" class="pagination__page" data-page="1">1</a> 
                         <a href="#" class="pagination__page" data-page="2">2</a> 
                         <a href="#" class="pagination__page" data-page="3">3</a> 
                         <a href="#" class="pagination__page" data-page="4">4</a> 
-                        <a href="#" id="pagination_next">Next</a> 
+                        <a href="#" id="pagination_next">Вперёд</a> 
                     </div>
                 </div>
                 
@@ -199,5 +140,6 @@
     <script src="assets/js/header.js"></script>
     <script src="assets/js/filters.js" type="module"></script>
     <script src="assets/js/pagination.js" type="module"></script>
+    <script src="assets/js/productsLoader.js" type="module"></script>
 </body>
 </html>

@@ -17,7 +17,6 @@ export function displayPage(page) {
     
     pag_cards.forEach((card, index) => { 
         if (index >= startIndex && index < endIndex) {
-            console.log("filter")
             card.style.display = 'flex'; 
         } else { 
             card.style.display = 'none'; 
@@ -25,12 +24,10 @@ export function displayPage(page) {
     }); 
 } 
 
-
 export function updatePagination() {
-    pag_cards = document.querySelectorAll('.products__card.active');
+    pag_cards = document.querySelectorAll('.products__card');
     
     totalPages = Math.ceil(pag_cards.length / maxCards);
-    console.log(pag_cards)
     prevButton.disabled = currentPage === 1; 
     nextButton.disabled = currentPage === totalPages; 
     pageLinks.forEach((link) => {
