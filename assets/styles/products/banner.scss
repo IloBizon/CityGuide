@@ -10,21 +10,22 @@
         color: white;
     }
     &__title {
-        font-size: 150px;
+        font-size: 110px;
         font-family: "Montserrat";
         &.active {
             animation: jump_down 0.7s ease-in-out forwards;
         }
         transform: translateY(-100px);
         opacity: 0;
-        @media (max-width: 1300px) {
-            font-size: 130px;;
-        }
         @media (max-width: 1000px) {
             font-size: 100px;
         }
-        @media (max-width: 500px) {
+        @media (max-width:670px) {
             font-size: 70px;
+        }
+
+        @media (max-width: 500px) {
+            font-size: 65px;
         }
         @media (max-width: 425px) {
             font-size: 60px;

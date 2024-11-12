@@ -11,7 +11,7 @@
   color: white;
 }
 .prod-banner__title {
-  font-size: 150px;
+  font-size: 110px;
   font-family: "Montserrat";
   transform: translateY(-100px);
   opacity: 0;
@@ -19,19 +19,19 @@
 .prod-banner__title.active {
   animation: jump_down 0.7s ease-in-out forwards;
 }
-@media (max-width: 1300px) {
-  .prod-banner__title {
-    font-size: 130px;
-  }
-}
 @media (max-width: 1000px) {
   .prod-banner__title {
     font-size: 100px;
   }
 }
-@media (max-width: 500px) {
+@media (max-width: 670px) {
   .prod-banner__title {
     font-size: 70px;
+  }
+}
+@media (max-width: 500px) {
+  .prod-banner__title {
+    font-size: 65px;
   }
 }
 @media (max-width: 425px) {

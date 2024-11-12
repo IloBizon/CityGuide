@@ -22,17 +22,22 @@ export async function loadProducts(searchQuery, filterQuery){
     }
 
 
-    let response = await fetch(url).catch(error => {
-            loader.innerHTML = "Ничего не найдено"
-            console.log("error")
+    let resp = fetch(url).then((response) => {
+        if (response.ok) {
+          return response.json();
+        }
+        throw Error(response.statusText)
+      })
+      .then((responseJson) => {
+        return responseJson
+      })
+      .catch((error) => {
+        console.log(error)
     });
-    let data = await response.json()
-    if (!response.ok) {
-            data = []
-    }
-
-    if (data == []) {
-        
+    
+    let data = await resp
+    if (data == undefined) {
+        data = []
     }
     
     removeChildren()
@@ -41,6 +46,16 @@ export async function loadProducts(searchQuery, filterQuery){
         const li = document.createElement("li")
         li.className = "products__card"
         li.style.background = `url(${element.image}) no-repeat center / cover`
+
+        li.addEventListener("click", ()=>{
+
+            
+            console.log(window.location.origin)
+            let url = new URL(window.location.origin + "/place.html")
+            url.searchParams.set("place",element.name)
+            console.log(url)
+            window.location.href = url;
+        })
 
         const div = document.createElement("div")
         div.className = "products__card-block"

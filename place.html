@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Place</title>
+    <link rel="stylesheet" href="assets/styles/footer.css">
+    <link rel="stylesheet" href="assets/styles/style.css">
+    <link rel="stylesheet" href="assets/styles/header.css">
+    <link rel="stylesheet" href="assets/styles/anims.css">
+    <link rel="stylesheet" href="assets/styles/products/banner.css">
+    <link rel="stylesheet" href="assets/styles/place/place.css">
+    <link rel="stylesheet" href="assets/styles/loader.css">
+
+</head>
+<body>
+    <nav class="menu hidden" id="menu">
+        <ul class="menu__list">
+            <li><a class="menu__button" href="./">Главная</a></li>
+            <li><a class="menu__button" href="./places.html">Места</a></li>
+            <li><a class="menu__button" href="./contacts.html">Контакты</a></li>
+        </ul>
+        <button class="menu__close-button" onclick="toggleMobMenu()"><img src="assets/img/icons/cross.svg" alt="close"></button>
+    </nav>
+    <span class="loader" id="loader">
+
+        <p>Загрузка...</p>
+
+    </span>
+
+    <header class="header" id="header">
+        <div class="container">
+            <div class="header__wrap">
+                <p class="header__logo"><a href="./">MSC</a></p>
+                <div class="header__block">
+                    <button class="header__burger-button" onclick="toggleMobMenu()">
+                        <img src="assets/img/icons/burger_light.svg" alt="burger_menu" class="header__burger">
+                    </button>
+                    <nav class="header__nav">
+                        <ul class="header__buttons">
+                            <li class="header__button"><a href="./">Главная</a></li>
+                            <li class="header__button"><a href="./places.html">Места</a></li>
+                            <li class="header__button"><a href="./contacts.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+    <header class="header header_fixed hidden" id="header_fixed">
+        <div class="container">
+            <div class="header__wrap">
+                <p class="header__logo header__logo_fixed"><a href="./">MSC</a></p>
+                <div class="header__block">
+                    <button class="header__burger-button" onclick="toggleMobMenu()">
+                        <img src="assets/img/icons/burger_dark.svg" alt="burger_menu" class="header__burger">
+                    </button>
+                    <nav class="header__nav">
+                        <ul class="header__buttons">
+                            <li class="header__button header__button_fixed"><a href="./">Главная</a></li>
+                            <li class="header__button header__button_fixed"><a href="./places.html">Места</a></li>
+                            <li class="header__button header__button_fixed"><a href="./contacts.html">Контакты</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+
+    <section class="prod-banner">
+        <div class="prod-banner__wrap">
+            <h1 class="prod-banner__title  scroll-reveal">Загрука...</h1>
+        </div>
+    </section>
+
+
+
+    <section class="place">
+        <div class="container">
+            <div class="place__wrap">
+                <div class="place__info">
+                    <h3 class="place__title">
+                        Загрузка...
+                    </h3>
+                    <span class="place__info-sep"></span>
+                    <p class="place__text">
+                        Загрузка...
+                    </p>
+                </div>
+                <div class="place__grid">
+                    <img src="assets/img/places/cards/city.png" alt="city" class="place__img">
+                    <div class="place__grid-block">
+                        <h3 class="place__grid-title">Факт 1:</h3>
+                        <p class="place__grid-text">Загрузка...</p>
+                    </div>
+                    <div class="place__grid-block">
+                        <h3 class="place__grid-title">Факт 2:</h3>
+                        <p class="place__grid-text">Загрузка...</p>
+                    </div>
+                    <img src="assets/img/places/cards/city.png" alt="city" class="place__img">
+                </div>
+            </div>
+
+        </div>
+        
+    
+    <div id="map"></div>
+
+    </section>
+
+
+
+
+
+
+
+    <footer class="footer">
+
+        <div class="container">
+            <div class="footer__wrap">
+                <p class="footer__logo">MSС</p>
+
+                <nav class="footer__block">
+                    <ul class="footer__buttons">
+                        <li class="footer__button"><a href="./">Главная</a></li>
+                        <li class="footer__button"><a href="./places.html">Места</a></li>
+                        <li class="footer__button"><a href="./index.html#hotels">Отели</a></li>
+                        <li class="footer__button"><a href="./index.html#map">Карта</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <p class="footer__rights">©Gukasov.T inc Все права защищены</p>
+        </div>
+    </footer>
+    <script src="assets/js/animantionsOnScroll.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/placeLoader.js"></script>
+    <script src="assets/js/mapLoader.js"></script>
+</body>
+</html>
