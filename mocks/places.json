@@ -1,0 +1,66 @@
+[
+    {
+      "image": "./assets/img/places/cards/city.png",
+      "name": "Moscow City",
+      "description": "самые высокие постройки в России",
+      "address": "ул Красная 1",
+      "category": "Достопримечательности",
+      "id": "1"
+    },
+    {
+      "image": "./assets/img/places/cards/red_square.png",
+      "name": "Красная площадь",
+      "description": "центр города",
+      "address": "ул Красная 5",
+      "category": "Достопримечательности",
+      "id": "2"
+    },
+    {
+      "image": "./assets/img/main/places/church.png",
+      "name": "Храм Василия Блаженного",
+      "description": "Древний храм на Красной площади",
+      "address": "ул Красная 5",
+      "category": "Достопримечательности",
+      "id": "3"
+    },
+    {
+      "image": "./assets/img/main/hotels/hyatt.png",
+      "name": "Hyatt",
+      "description": "5  звёздочный отель в центре",
+      "address": "ул Красная 1234",
+      "category": "Отели",
+      "id": "4"
+    },
+    {
+      "image": "./assets/img/main/hotels/marriot.png",
+      "name": "Marriott",
+      "description": "отель на Москве реке",
+      "address": "ул Набережная 1",
+      "category": "Отели",
+      "id": "5"
+    },
+    {
+      "image": "./assets/img/main/hotels/radisson.png",
+      "name": "Radisson",
+      "description": "отель с люкс номерами",
+      "address": "ул Набережная 1",
+      "category": "Отели",
+      "id": "6"
+    },
+    {
+      "image": "./assets/img/main/hotels/seasons.png",
+      "name": "Seasons",
+      "description": "",
+      "address": "ул Набережная 1",
+      "category": "Отели",
+      "id": "7"
+    },
+    {
+      "image": "./assets/img/main/hotels/national.png",
+      "name": "National",
+      "description": "",
+      "address": "ул Набережная 1",
+      "category": "Отели",
+      "id": "8"
+    }
+  ]

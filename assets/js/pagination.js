@@ -15,9 +15,13 @@ export function displayPage(page) {
     const startIndex = (page - 1) * maxCards; 
     const endIndex = startIndex + maxCards;
     
+    let cardNum = 0
     pag_cards.forEach((card, index) => { 
         if (index >= startIndex && index < endIndex) {
-            card.style.display = 'flex'; 
+            card.style.display = 'flex';
+            cardNum += 1
+            let delay = cardNum * 0.2
+            card.style.animationDelay = delay + "s"
         } else { 
             card.style.display = 'none'; 
         } 
