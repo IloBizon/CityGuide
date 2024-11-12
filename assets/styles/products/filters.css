@@ -121,7 +121,9 @@
   border-radius: 16px;
   position: relative;
   margin: 0 auto;
+  animation: jump_down 0.7s ease-in-out forwards;
   transition: all 0.3s ease-in-out;
+  background-size: 200px auto;
 }
 @media (max-width: 1300px) {
   .products__card {
@@ -147,7 +149,6 @@
 }
 .products__card:hover {
   cursor: pointer;
-  transform: scale(1.02);
 }
 .products__card-category {
   opacity: 0;

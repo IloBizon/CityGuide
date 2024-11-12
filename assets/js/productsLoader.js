@@ -41,17 +41,25 @@ export async function loadProducts(searchQuery, filterQuery){
     }
     
     removeChildren()
+
     
     data.forEach(element => {
         const li = document.createElement("li")
         li.className = "products__card"
         li.style.background = `url(${element.image}) no-repeat center / cover`
-
+        li.style.opacity = 0
+        li.style.animation = "jump_down 0.7s ease-in-out forwards"
         li.addEventListener("click", ()=>{
 
             
             console.log(window.location.origin)
+
+           if (window.location.href.includes("CityGuide")) {
+            let url = new URL(window.location.origin + "/CityGuide/place.html")
+           }
+           else {
             let url = new URL(window.location.origin + "/place.html")
+           }
             url.searchParams.set("place",element.name)
             console.log(url)
             window.location.href = url;
