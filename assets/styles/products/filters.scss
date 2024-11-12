@@ -113,7 +113,8 @@
         border-radius: 16px;
         position: relative;
         margin: 0 auto;
-
+        animation: jump_down 0.7s ease-in-out forwards;
+        
         @media (max-width: 1300px) {
             width: 350px;
         }
@@ -131,9 +132,11 @@
             height: 300px;
         }
         transition: all 0.3s ease-in-out;
+        background-size: 200px auto;
         &:hover {
             cursor: pointer;
-            transform: scale(1.02);
+            
+
         }
 
         &-category {
