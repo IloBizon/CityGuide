@@ -1,3 +1,5 @@
+import { loadMap } from "./mapLoader.js"
+
 const pageTitle = document.querySelector(".prod-banner__title")
 const banner = document.querySelector(".prod-banner")
 const infoTitle = document.querySelector(".place__title")
@@ -5,6 +7,7 @@ const infoText = document.querySelector(".place__text")
 const facts = document.querySelectorAll(".place__grid-text")
 const loader = document.getElementById("loader")
 const images = document.querySelectorAll(".place__img")
+
 
 
 async function loadPage() {
@@ -34,8 +37,9 @@ async function loadPage() {
     });
 
     var data = await resp
-    
 
+    
+    loadMap(urlParams.get("place"))
     banner.style.background = ` linear-gradient(
           rgba(0, 0, 0, 0.5 ),
           rgba(0, 0, 0, 0.5)
@@ -44,7 +48,7 @@ async function loadPage() {
     infoTitle.innerHTML = data[0].name
     infoText.innerHTML = data[0].description
     for (var i = 0; i < facts.length; i++) {
-        fact = facts[i];
+        let fact = facts[i];
         fact.innerHTML = data[0].facts[i]
     }
     for (let index = 0; index < images.length; index++) {

@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="assets/styles/products/banner.css">
     <link rel="stylesheet" href="assets/styles/place/place.css">
     <link rel="stylesheet" href="assets/styles/loader.css">
+    <link rel="stylesheet" href="assets/styles/main/map.css">
 
 </head>
 <body>
@@ -80,7 +81,7 @@
     <section class="place">
         <div class="container">
             <div class="place__wrap">
-                <div class="place__info">
+                <div class="place__info scroll-reveal">
                     <h3 class="place__title">
                         Загрузка...
                     </h3>
@@ -89,7 +90,7 @@
                         Загрузка...
                     </p>
                 </div>
-                <div class="place__grid">
+                <div class="place__grid scroll-reveal">
                     <img src="assets/img/places/cards/city.png" alt="city" class="place__img">
                     <div class="place__grid-block">
                         <h3 class="place__grid-title">Факт 1:</h3>
@@ -105,13 +106,14 @@
 
         </div>
         
-    
-    <div id="map"></div>
+
 
     </section>
 
+    <div class="map">
+        <iframe class="map__frame" src="https://yandex.ru/map-widget/v1/?um=constructor%3A3a2422f8df89b797dfac7093c4e6306d3f0e26d0676f1ea6872b5fd3b6a0c11a&amp;source=constructor" width="100%" height="468" frameborder="0" id="map"></iframe>
 
-
+    </div>
 
 
 
@@ -134,9 +136,10 @@
             <p class="footer__rights">©Gukasov.T inc Все права защищены</p>
         </div>
     </footer>
-    <script src="assets/js/animantionsOnScroll.js"></script>
+    <script src="assets/js/animantionsOnScroll.js" ></script>
     <script src="assets/js/header.js"></script>
-    <script src="assets/js/placeLoader.js"></script>
-    <script src="assets/js/mapLoader.js"></script>
+    <script src="assets/js/mapLoader.js" type="module"></script>
+    <script src="assets/js/placeLoader.js" type="module"></script>
+
 </body>
 </html>

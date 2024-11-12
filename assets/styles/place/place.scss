@@ -38,6 +38,9 @@
         }
     }
     &__grid {
+        &.active {
+            animation: jump_left 0.7s ease-in-out forwards;
+        }
         display: grid;
         max-width: fit-content;
         grid-template-columns: 350px 350px;
@@ -97,7 +100,10 @@
         @media (max-width:550px) {
             width: unset;
         }
-        
+        &.active {
+            animation: jump_right 0.7s ease-in-out forwards;
+        }
+
         &-sep {
             display: block;
             width: 100%;
