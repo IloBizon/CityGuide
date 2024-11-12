@@ -18,9 +18,9 @@ async function loadPage() {
     if (urlParams.has("place")) {
         url.searchParams.append("name", urlParams.get("place"))
     }
-    // else {
-    //     window.location.href = "places.html";
-    // }
+    else {
+        window.location.href = "places.html";
+    }
 
     
     let resp = fetch(url).then((response) => {
@@ -62,6 +62,8 @@ async function loadPage() {
     
 }
 loadPage()
+
+
 
 
 

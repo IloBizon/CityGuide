@@ -1,7 +1,7 @@
 let header = document.getElementById("header_fixed")
 let menu = document.getElementById("menu");
 const menuItems = document.querySelectorAll(".menu__button");
-
+let headerShown = false
 function sleep(ms) {
     return new Promise(resolve => setTimeout(resolve, ms));
   }
@@ -29,14 +29,21 @@ menuItems.forEach(
   )
 
 function showHeader() {
+  if (!headerShown) {
     header.classList.remove("hidden");
     header.classList.remove("inactive");
     header.classList.add("active");
+    headerShown = true
+  }
+
 }
 function hideHeader() {
-    header.classList.remove("active");
-    header.classList.add("inactive")
-    sleep(500).then(() => {header.classList.add("hidden")});
+    if (headerShown) {
+      header.classList.remove("active");
+      header.classList.add("inactive")
+      headerShown = false
+      sleep(500).then(() => {header.classList.add("hidden")});
+    }
     
 }
 
