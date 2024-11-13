@@ -1,6 +1,7 @@
 .prod-banner {
   background: url("../../img/places/bg/bg.png") no-repeat center center/cover;
   height: 60vh;
+  transition: all 3s;
 }
 .prod-banner__wrap {
   height: 100%;

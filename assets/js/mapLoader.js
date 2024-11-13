@@ -13,4 +13,19 @@ let maps = {
 
 export function loadMap(place) {
     frame.src = maps[place]
+    
+
+}
+
+
+async function scaleMap(maxWidth){
+    
+    while (frame.style.width != maxWidth) {
+        
+        let newWidth  = frame.style.width
+        console.log(frame.style.width)
+        frame.style.width =  5 + "px"
+        await new Promise(r => setTimeout(r, 200));
+    }
+
 }
