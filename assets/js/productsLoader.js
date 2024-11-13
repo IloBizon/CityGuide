@@ -49,6 +49,17 @@ export async function loadProducts(searchQuery, filterQuery){
         li.style.background = `url(${element.image}) no-repeat center / cover`
         li.style.opacity = 0
         li.style.animation = "jump_down 0.7s ease-in-out forwards"
+        
+        li.addEventListener("mouseover", ()=>{
+            li.style.opacity = 1
+            li.style.animation = ""
+            li.style.scale = "1.05"
+        })
+
+        li.addEventListener("mouseout", () =>{
+            li.style.scale = "1"
+        })
+
         li.addEventListener("click", ()=>{
 
             
