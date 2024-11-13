@@ -4,12 +4,7 @@
 }
 .place {
   width: 100%;
-  margin: 100px 0;
-}
-@media (max-width: 1250px) {
-  .place {
-    margin: 50px 0;
-  }
+  margin: 10px 0;
 }
 .place__img {
   -o-object-fit: cover;
@@ -39,7 +34,6 @@
   display: flex;
   font-family: "Montserrat";
   gap: 50px;
-  margin: 0 10px;
 }
 @media (max-width: 768px) {
   .place__wrap {
