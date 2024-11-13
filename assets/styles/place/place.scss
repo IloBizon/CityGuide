@@ -1,10 +1,8 @@
 @import "../vars";
 .place {
     width: 100%;
-    margin: 100px 0;
-    @media (max-width:1250px) {
-        margin: 50px 0;
-    }
+    margin: 10px 0;
+
     &__img {
         object-fit: cover;
         width: 350px;
@@ -27,7 +25,6 @@
         display: flex;
         font-family: $main_font;
         gap: 50px;
-        margin: 0 10px;
         @media (max-width:768px) {
             flex-direction: column;
             align-items: center;

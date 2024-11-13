@@ -7,11 +7,12 @@ const infoText = document.querySelector(".place__text")
 const facts = document.querySelectorAll(".place__grid-text")
 const loader = document.getElementById("loader")
 const images = document.querySelectorAll(".place__img")
+const breadcrumb = document.getElementById("breadcrumb_place")
 
 
 
 async function loadPage() {
-    
+
     loader.classList.remove("inactive")
     let url = new URL("https://6729b8c56d5fa4901b6e1298.mockapi.io/cityguide/full-place")
     const urlParams = new URLSearchParams(window.location.search);
@@ -45,6 +46,7 @@ async function loadPage() {
           rgba(0, 0, 0, 0.5)
         ), url(${data[0].images[0]}) no-repeat center / cover`
     document.title = data[0].name
+    breadcrumb.innerHTML = data[0].name
     pageTitle.innerHTML = data[0].name
     infoTitle.innerHTML = data[0].name
     infoText.innerHTML = data[0].description
