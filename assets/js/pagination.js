@@ -23,7 +23,8 @@ export function displayPage(page) {
             cardNum += 1
             let delay = cardNum * 0.2
             card.style.animationDelay = delay + "s"
-        } else { 
+        } else {
+            card.style.opacity = 0
             card.style.display = 'none'; 
         } 
     }); 

@@ -52,7 +52,7 @@ export async function loadProducts(searchQuery, filterQuery){
         
         li.addEventListener("mouseover", ()=>{
             li.style.opacity = 1
-            li.style.animation = ""
+
             li.style.scale = "1.05"
         })
 
