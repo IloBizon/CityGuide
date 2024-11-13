@@ -53,16 +53,16 @@ export async function loadProducts(searchQuery, filterQuery){
 
             
             console.log(window.location.origin)
-
+            let link = ""
            if (window.location.href.includes("CityGuide")) {
-            let url = new URL(window.location.origin + "/CityGuide/place.html")
+            link = new URL(window.location.origin + "/CityGuide/place.html")
            }
            else {
-            let url = new URL(window.location.origin + "/place.html")
+            link = new URL(window.location.origin + "/place.html")
            }
-            url.searchParams.set("place",element.name)
-            console.log(url)
-            window.location.href = url;
+           link.searchParams.set("place",element.name)
+            console.log(link)
+            window.location.href = link;
         })
 
         const div = document.createElement("div")
