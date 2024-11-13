@@ -1,7 +1,7 @@
 const loader = document.getElementById("loader")
 const cardsWrap = document.getElementById("cards")
 import { filterIcons } from "../js/filters.js";
-import { updatePagination } from "./pagination.js";
+import { generatePagination } from "./pagination.js";
 
 function removeChildren() {
     if (cardsWrap.hasChildNodes) {
@@ -105,9 +105,13 @@ export async function loadProducts(searchQuery, filterQuery){
 
     });
     loader.classList.add("inactive")
+    generatePagination()
+    
 }
 
 cardsWrap.onload = function () {
+    
+
     loader.classList.add("inactive")
 }
 
