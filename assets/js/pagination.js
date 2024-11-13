@@ -31,6 +31,7 @@ export function displayPage(page) {
 } 
 
 export function generatePagination(){
+    pageLinks.replaceChildren()
     pag_cards = document.querySelectorAll('.products__card');
     totalPages = Math.ceil(pag_cards.length / maxCards);
     console.log(totalPages)
@@ -52,6 +53,7 @@ export function generatePagination(){
             } 
         }); 
         links.push(a)
+
     }
 }
 
@@ -61,10 +63,7 @@ export function updatePagination() {
     totalPages = Math.ceil(pag_cards.length / maxCards);
     prevButton.disabled = currentPage === 1; 
     nextButton.disabled = currentPage === totalPages; 
-
-
-
-
+    
     links.forEach((link) => {
         const page = parseInt(link.getAttribute('data-page')); 
         link.classList.toggle('active', page === currentPage);
@@ -78,6 +77,10 @@ export function updatePagination() {
         
 
     });
+
+
+
+    
     if (totalPages == 0) {
         pagination.style.display = "none"
     }
