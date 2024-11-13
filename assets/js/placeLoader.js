@@ -44,6 +44,7 @@ async function loadPage() {
           rgba(0, 0, 0, 0.5 ),
           rgba(0, 0, 0, 0.5)
         ), url(${data[0].images[0]}) no-repeat center / cover`
+    document.title = data[0].name
     pageTitle.innerHTML = data[0].name
     infoTitle.innerHTML = data[0].name
     infoText.innerHTML = data[0].description
